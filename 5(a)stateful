@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Widget Types")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("I am Stateless Widget"),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Click Me"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
