@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      appBar: AppBar(title: Text("Media Query")),
+      body: Center(
+        child: Container(
+          width: width < 600 ? 200 : 400,
+          height: 150,
+          color: width < 600 ? Colors.blue : Colors.green,
+          child: Center(
+            child: Text(
+              width < 600 ? "Mobile View" : "Desktop View",
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
